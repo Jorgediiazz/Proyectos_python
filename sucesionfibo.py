@@ -1,9 +1,13 @@
-#Sucesión de Fibbonacci
+#Sucesión de Fibonacci
 
-def sucesionfibbo(n):
-    if(n==0):
-        return 1
+def fibonacci_rec(n):
     if(n==1):
         return 1
+    elif(n==0):
+        return 1
     else:
-        return 
+        return fibonacci_rec(n-2)+fibonacci_rec(n-1)
+        return fibonacci_rec(n)
+
+n= int(input("Dime un número: "))
+print(fibonacci_rec(n))
